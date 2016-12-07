@@ -2,13 +2,16 @@
 #  Joe Giancaspro BASH Profile
 #  ---------------------------------------------------------------------------
 
+# prioritize ~/bin's in PATH
+export PATH=$HOME/bin:$PATH
+
 # load the dotfiles
-for file in ~/.{aliases,colors,bash_prompt,exports}; do
+# ~/.path contains PATH extensions and is purposely not committed
+for file in ~/.{path,aliases,colors,bash_prompt,exports}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
-export PATH=/Users/joe/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:/Users/joe/.cargo/bin:$PATH
 
 # ensure rbenv is loaded
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
