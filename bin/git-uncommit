@@ -1,0 +1,30 @@
+#!/usr/bin/ruby
+
+def main
+  die if has_local_changes?
+  uncommit
+end
+
+def has_local_changes?
+  !(system 'git diff --exit-code --quiet')
+end
+
+def sha
+  `git rev-parse HEAD`.strip
+end
+
+def branch_name
+  `git rev-parse --abbrev-ref HEAD`.strip
+end
+
+def uncommit
+  puts "Uncommitted #{sha} on '#{branch_name}'"
+  system 'git reset HEAD~'
+end
+
+def die
+  puts 'Local changes detected. Aborting!'
+  exit 1
+end
+
+main
