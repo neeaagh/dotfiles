@@ -10,9 +10,6 @@ unset file;
 
 export PATH=/Users/joe/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:/Users/joe/.cargo/bin:$PATH
 
-# load git promt script
-source ~/.git-prompt.sh
-
 # ensure rbenv is loaded
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
