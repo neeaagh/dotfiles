@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+alias vim='mvim -v'                        # use macvim
+alias subl="open -a 'Sublime Text'"
+
+alias sbp="source ~/.bash_profile"
+
+alias beu="bundle exec unicorn"
+alias bep="bundle exec puma"
+alias bi="bundle install"
+alias be="bundle exec"
+alias qrw="QUEUE=* bundle exec rake environment resque:work"
+
+alias rc="rails c"
+alias rg="rails generate"
+
+alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias mv='mv -iv'                           # Preferred 'mv' implementation
+alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
+alias less='less -FSRXc'                    # Preferred 'less' implementation
+cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
+alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
+alias ..='cd ../'                           # Go back 1 directory level
+alias ...='cd ../../'                       # Go back 2 directory levels
+alias .3='cd ../../../'                     # Go back 3 directory levels
+alias .4='cd ../../../../'                  # Go back 4 directory levels
+alias ~="cd ~"                              # Go Home
+alias c='clear'                             # Clear terminal display
+alias which='type -all'                     # Find executables
+
+# Project specific
+alias hcp="heroku run console -a mlr-production"
+alias mlrdir="cd ~/Sites/my-local-reports/localizeit"
