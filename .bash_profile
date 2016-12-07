@@ -1,18 +1,15 @@
 #  ---------------------------------------------------------------------------
 #  Joe Giancaspro BASH Profile
-#
-#  Description:  This file holds all my BASH configurations and aliases
-#  Much of this is sourced from : http://natelandau.com/my-mac-osx-bash_profile/
-#
-#  Sections:
-#  1.   Color Variables
-#	 2.   Aliases
-#	 3.   Environment Variables
-#
 #  ---------------------------------------------------------------------------
 
+# load the dotfiles
+for file in ~/.{aliases,colors}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
 #   -------------------------------
-#   1.  Color Variables
+#   Color Variables
 #   -------------------------------
 
 		txtblk='\e[0;30m' # Black - Regular
@@ -91,42 +88,8 @@
     PROMPT_COMMAND=print_before_prompt
     PS1="->"
 
-    #   -----------------------------
-    #   2.  ALIASES
-    #   -----------------------------
-
-		alias vim='mvim -v'
-		alias subl="open -a 'Sublime Text'"
-		alias beu="bundle exec unicorn"
-		alias bep="bundle exec puma"
-		alias hcp="heroku run console -a mlr-production"
-		alias qrw="QUEUE=* bundle exec rake environment resque:work"
-		alias sbp="source ~/.bash_profile"
-		alias bi="bundle install"
-		alias be="bundle exec"
-		
-		alias rc="rails c"
-		alias rg="rails generate"
-		alias mlrdir="cd ~/Sites/my-local-reports/localizeit"
-
-		alias cp='cp -iv'                           # Preferred 'cp' implementation
-		alias mv='mv -iv'                           # Preferred 'mv' implementation
-		alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
-		alias less='less -FSRXc'                    # Preferred 'less' implementation
-		cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
-		alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
-		alias ..='cd ../'                           # Go back 1 directory level
-		alias ...='cd ../../'                       # Go back 2 directory levels
-		alias .3='cd ../../../'                     # Go back 3 directory levels
-		alias .4='cd ../../../../'                  # Go back 4 directory levels
-		alias .5='cd ../../../../../'               # Go back 5 directory levels
-		alias .6='cd ../../../../../../'            # Go back 6 directory levels
-		alias ~="cd ~"                              # ~:            Go Home
-		alias c='clear'                             # c:            Clear terminal display
-		alias which='type -all'                     # which:        Find executables
-
 #   -----------------------------
-#   3.  ENVIRONMENT VARIABLES
+#   ENVIRONMENT VARIABLES
 #   -----------------------------
 
 		export RACK_ENV='development'
