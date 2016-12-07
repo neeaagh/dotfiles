@@ -1,0 +1,9 @@
+#!/user/bin/env bash
+
+export RACK_ENV='development'
+export BULLET_STATUS='false'
+export RMP_STATUS='true'
+export PGHOST=localhost
+
+export NVM_DIR=~/.nvm
+

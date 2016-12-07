@@ -3,7 +3,7 @@
 #  ---------------------------------------------------------------------------
 
 # load the dotfiles
-for file in ~/.{aliases,colors}; do
+for file in ~/.{aliases,colors,exports}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -45,11 +45,6 @@ unset file;
 #   ENVIRONMENT VARIABLES
 #   -----------------------------
 
-		export RACK_ENV='development'
-		export BULLET_STATUS='false'
-    export RMP_STATUS='true'
-		export PGHOST=localhost
-
 		export PATH=/Users/joe/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:/Users/joe/.cargo/bin:$PATH
    
 # load git promt script
@@ -59,7 +54,6 @@ source ~/.git-prompt.sh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # NVM
-export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # Free up C-s
