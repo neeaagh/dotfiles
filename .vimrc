@@ -17,6 +17,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'scrooloose/syntastic'
 Plugin 'rust-lang/rust.vim'
 Plugin 'textobj-user'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " tells vim where to find the tags file for ctags
 Plugin 'tpope/vim-bundler'
@@ -97,7 +98,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 if executable("ag")
     set grepprg=ag\ --nogroup\ --nocolor
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'

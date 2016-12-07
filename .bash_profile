@@ -16,8 +16,5 @@ unset file;
 # ensure rbenv is loaded
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# NVM
-source $(brew --prefix nvm)/nvm.sh
-
 # Free up C-s
 stty -ixon
