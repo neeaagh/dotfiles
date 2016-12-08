@@ -62,6 +62,9 @@ vnoremap <leader>19 :s/:\([^ ]*\)\(\s*\)=>/\1:/g<cr>
 nnoremap <leader>18 :%s/\(\w\+\):\s/:\1 => /gc<cr>
 vnoremap <leader>18 :s/\(\w\+\):\s/:\1 => /g<cr>
 
+" change surrounding quotes
+map <leader>' cs"'
+map <leader>" cs'"
 
 set rnu
 set ruler
