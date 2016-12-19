@@ -28,6 +28,3 @@ alias ~="cd ~"                              # Go Home
 alias c='clear'                             # Clear terminal display
 alias which='type -all'                     # Find executables
 
-# Project specific
-alias hcp="heroku run console -a mlr-production"
-alias mlrdir="cd ~/Sites/my-local-reports/localizeit"
