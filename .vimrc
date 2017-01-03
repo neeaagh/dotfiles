@@ -94,9 +94,14 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 set splitbelow
 set splitright
 
+" [buffer number] followed by filename:
+set statusline=[%n]\ %t
+" syntastic messages
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+" show line#:column# on the right hand side
+set statusline+=%=%l:%c
 
 " Syntastic defaults
 let g:syntastic_always_populate_loc_list = 1
