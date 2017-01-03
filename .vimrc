@@ -74,6 +74,7 @@ set ruler
 set showcmd " show incomplete commands
 set laststatus=2 " always show status bar
 set nowrap
+set incsearch
 
 " 2 spaces for tabs
 set tabstop=2
