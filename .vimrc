@@ -68,6 +68,8 @@ vnoremap <leader>18 :s/\(\w\+\):\s/:\1 => /g<cr>
 " change surrounding quotes
 map <leader>' cs"'
 map <leader>" cs'"
+" indent all
+map <leader>i mmgg=G`m
 
 set rnu
 set ruler
