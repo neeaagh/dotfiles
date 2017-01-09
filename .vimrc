@@ -21,6 +21,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'rust-lang/rust.vim'
 Plugin 'textobj-user'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " tells vim where to find the tags file for ctags
 Plugin 'tpope/vim-bundler'
