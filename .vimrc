@@ -23,6 +23,7 @@ Plugin 'textobj-user'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'slim-template/vim-slim.git'
 
 " tells vim where to find the tags file for ctags
 Plugin 'tpope/vim-bundler'
